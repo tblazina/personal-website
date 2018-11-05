@@ -3,25 +3,16 @@
  */
 
 import { call, put, takeLatest } from 'redux-saga/effects';
-import * as contentful from 'contentful';
 
 import { LOAD_POST } from './constants';
 import { apiSuccess, apiError } from './actions';
-
-// import request from 'utils/request';
-// import { makeSelectUsername } from 'containers/HomePage/selectors';
+import contentfulClient from '../../utils/helper_functions/contentful';
 
 /**
  * Github repos request/response handler
  */
 
-const client = contentful.createClient({
-  space: 'ful6an5guvso',
-  accessToken:
-    '1c6f7860f901a4802da316efa8d12f20d8243198e70ad2edd222d1c45c594424',
-});
-
-const fetchPosts = id => client.getEntry(id);
+const fetchPosts = id => contentfulClient.getEntry(id);
 
 export function* getPost(payload) {
   try {

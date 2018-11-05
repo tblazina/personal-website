@@ -60,6 +60,7 @@ export class Photos extends React.Component {
   }
   render() {
     const { photos } = this.props.photos;
+
     const photosPlucked = [];
     if (!_.isEmpty(photos)) {
       _.forEach(photos, d => {

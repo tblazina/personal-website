@@ -13,6 +13,7 @@ export const initialState = fromJS({
 function photosReducer(state = initialState, action) {
   switch (action.type) {
     case API_SUCCESS: {
+      console.log(action.payload);
       return state.set('photos', action.payload);
     }
 
