@@ -11,6 +11,7 @@
 
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
+import { Grid } from '@material-ui/core';
 
 import messages from './messages';
 
@@ -18,9 +19,16 @@ import messages from './messages';
 export default class NotFound extends React.Component {
   render() {
     return (
-      <h1>
-        <FormattedMessage {...messages.header} />
-      </h1>
+      <div>
+        <Grid container>
+          <Grid item sm={2} />
+          <Grid item sm={8}>
+            <h1 style={{ textAlign: 'center' }}>
+              <FormattedMessage {...messages.header} />
+            </h1>
+          </Grid>
+        </Grid>
+      </div>
     );
   }
 }

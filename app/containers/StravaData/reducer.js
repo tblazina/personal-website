@@ -1,6 +1,6 @@
 /*
  *
- * Photos reducer
+ * StravaData reducer
  *
  */
 
@@ -8,12 +8,13 @@ import { fromJS } from 'immutable';
 import { API_ERROR, API_SUCCESS } from './constants';
 
 export const initialState = fromJS({
-  photoItems: [],
+  activities: [],
 });
-function photosReducer(state = initialState, action) {
+
+function stravaDataReducer(state = initialState, action) {
   switch (action.type) {
     case API_SUCCESS: {
-      return state.set('photoItems', action.payload);
+      return state.set('activities', action.payload);
     }
 
     case API_ERROR: {
@@ -25,4 +26,4 @@ function photosReducer(state = initialState, action) {
   }
 }
 
-export default photosReducer;
+export default stravaDataReducer;

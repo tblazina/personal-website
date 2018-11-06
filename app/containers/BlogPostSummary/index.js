@@ -77,7 +77,7 @@ export class BlogPostSummary extends React.Component {
         <Grid container>
           <Grid item sm={1} />
           <Grid item sm={10}>
-            {posts.reverse().map(d => (
+            {posts.map(d => (
               <div key={d.sys.id}>
                 <StyledPaper>
                   <Grid container>

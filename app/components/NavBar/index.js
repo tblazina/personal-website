@@ -23,17 +23,17 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MailIcon from '@material-ui/icons/Mail';
 import Person from '@material-ui/icons/Person';
-import Home from '@material-ui/icons/Home';
 import ListAlt from '@material-ui/icons/ListAlt';
 
-const MainWrapper = styled.div`
-  margin-top: 5vw;
-`;
+// const MainWrapper = styled.div`
+//   margin-top: 5vw;
+//   margin-left: 10vw;
+// `;
 const StyledTypography = styled(Typography)`
   padding: 10px;
 `;
 
-const drawerWidth = 180;
+const drawerWidth = 150;
 
 const styles = theme => ({
   root: {
@@ -64,7 +64,7 @@ const styles = theme => ({
     display: 'none',
   },
   drawerPaper: {
-    position: 'relative',
+    position: 'fixed',
     whiteSpace: 'nowrap',
     width: drawerWidth,
     transition: theme.transitions.create('width', {
@@ -94,8 +94,6 @@ const styles = theme => ({
     flexGrow: 1,
     padding: theme.spacing.unit * 3,
     fontSize: '16px',
-  },
-  main: {
     marginTop: '100px',
   },
 });
@@ -163,15 +161,7 @@ class App extends React.Component {
           </div>
           <Divider />
           <List>
-            <ListItem button component={Link} to="/" key="home">
-              <ListItemIcon>
-                <Home />
-              </ListItemIcon>
-              <ListItemText primary="Home" />
-            </ListItem>
-          </List>
-          <List>
-            <ListItem button component={Link} to="/posts" key="posts">
+            <ListItem button component={Link} to="/" key="posts">
               <ListItemIcon>
                 <ListAlt />
               </ListItemIcon>
@@ -204,7 +194,9 @@ class App extends React.Component {
             <Divider />
             <ListItem
               button
-              onClick={() => window.open('https://www.github.com/tblazina')}
+              component="a"
+              href="https://www.github.com/tblazina"
+              target="_blank"
               key="Github"
             >
               <img
@@ -216,9 +208,9 @@ class App extends React.Component {
             </ListItem>
             <ListItem
               button
-              onClick={() =>
-                window.open('https://www.linkedin.com/in/tim-blazina')
-              }
+              component="a"
+              href="https://www.linkedin.com/in/tim-blazina"
+              target="_blank"
               key="linkedin"
             >
               <img
@@ -230,9 +222,9 @@ class App extends React.Component {
             </ListItem>
             <ListItem
               button
-              onClick={() =>
-                window.open('https://stackoverflow.com/users/4120499/tblazkey')
-              }
+              component="a"
+              href="https://stackoverflow.com/users/4120499/tblaz"
+              target="_blank"
               key="stackoverflow"
             >
               <img
@@ -244,9 +236,7 @@ class App extends React.Component {
             </ListItem>
           </List>
         </Drawer>
-        <main className={classes.content}>
-          <MainWrapper> {children} </MainWrapper>
-        </main>
+        <main className={classes.content}>{children}</main>
       </div>
     );
   }

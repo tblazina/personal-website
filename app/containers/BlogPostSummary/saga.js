@@ -7,12 +7,6 @@ import { call, put, takeLatest } from 'redux-saga/effects';
 import { LOAD_POSTS } from './constants';
 import { apiSuccess, apiError } from './actions';
 import contentfulClient from '../../utils/helper_functions/contentful';
-// import request from 'utils/request';
-// import { makeSelectUsername } from 'containers/HomePage/selectors';
-
-/**
- * Github repos request/response handler
- */
 
 const fetchPosts = () =>
   contentfulClient.getEntries({

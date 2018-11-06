@@ -59,11 +59,11 @@ export class Photos extends React.Component {
     });
   }
   render() {
-    const { photos } = this.props.photos;
+    const { photoItems } = this.props.photos;
 
     const photosPlucked = [];
-    if (!_.isEmpty(photos)) {
-      _.forEach(photos, d => {
+    if (!_.isEmpty(photoItems)) {
+      _.forEach(photoItems, d => {
         const photo = {
           caption: d.fields.caption,
           height: d.fields.height,
@@ -99,7 +99,8 @@ export class Photos extends React.Component {
 
 Photos.propTypes = {
   dispatch: PropTypes.func.isRequired,
-  photos: PropTypes.array,
+  photoItems: PropTypes.array,
+  photos: PropTypes.object,
 };
 
 const mapStateToProps = createStructuredSelector({

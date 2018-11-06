@@ -18,8 +18,10 @@ export default class HomePage extends React.PureComponent {
     return (
       <div>
         <Grid container>
-          <Grid sm={3} />
-          <Grid sm={6}>Welcome to my site</Grid>
+          <Grid item sm={3} />
+          <Grid item sm={6}>
+            Welcome to my site
+          </Grid>
         </Grid>
       </div>
     );

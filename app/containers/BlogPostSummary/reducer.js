@@ -5,6 +5,8 @@
  */
 
 import { fromJS } from 'immutable';
+import _ from 'lodash';
+
 import { API_ERROR, API_SUCCESS } from './constants';
 
 export const initialState = fromJS({
@@ -14,7 +16,13 @@ export const initialState = fromJS({
 function blogPostSummaryReducer(state = initialState, action) {
   switch (action.type) {
     case API_SUCCESS: {
-      return state.set('posts', action.payload);
+      const orderedPosts = _.orderBy(
+        action.payload,
+        d => d.fields.publishDatetime,
+        'desc',
+      );
+
+      return state.set('posts', orderedPosts);
     }
 
     case API_ERROR: {

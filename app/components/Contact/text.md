@@ -1,1 +1,0 @@
-## You can contact me via email at tim.blazina@gmail.com
