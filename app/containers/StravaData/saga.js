@@ -21,6 +21,10 @@ axios.interceptors.response.use(
         .then(response => {
           localStorage.STRAVA_TOKEN = response.data.access_token;
           localStorage.STRAVA_REFRESH_TOKEN = response.data.refresh_token;
+          originalRequest.headers.Authorization = `Bearer ${
+            localStorage.STRAVA_TOKEN
+          }`;
+          console.log('ok');
           return axios(originalRequest);
         });
     }
