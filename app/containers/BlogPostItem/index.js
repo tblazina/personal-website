@@ -10,7 +10,7 @@ import { connect } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
-import { Grid } from '@material-ui/core';
+import { Grid, CircularProgress } from '@material-ui/core';
 import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 import _ from 'lodash';
@@ -49,7 +49,7 @@ export class BlogPostItem extends React.Component {
     const { post } = this.props.blogpostitem;
 
     if (_.isEmpty(post)) {
-      return null;
+      return <CircularProgress />;
     }
 
     return (

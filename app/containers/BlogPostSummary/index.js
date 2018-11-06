@@ -11,7 +11,7 @@ import { Helmet } from 'react-helmet';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 import styled from 'styled-components';
-import { Avatar, Grid, Paper } from '@material-ui/core';
+import { Avatar, Grid, Paper, CircularProgress } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import _ from 'lodash';
@@ -65,7 +65,7 @@ export class BlogPostSummary extends React.Component {
   render() {
     const { posts } = this.props.blogpostsummary;
     if (_.isEmpty(posts)) {
-      return null;
+      return <CircularProgress />;
     }
 
     return (
