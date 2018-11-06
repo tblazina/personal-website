@@ -24,7 +24,6 @@ axios.interceptors.response.use(
           originalRequest.headers.Authorization = `Bearer ${
             localStorage.STRAVA_TOKEN
           }`;
-          console.log('ok');
           return axios(originalRequest);
         });
     }
