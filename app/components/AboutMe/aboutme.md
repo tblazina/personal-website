@@ -14,6 +14,8 @@ I built this site in React.js using a scaffold supplied by the fantastic [react-
 ---
 
 
+# Curriculum Vitae
+
 ## Work Experience
   - **Data scientist**, [felfel ag](https://felfel.ch), March 2016 - August 2018
   - **Student Researcher**, ETH Zürich, November 2011-November 2015

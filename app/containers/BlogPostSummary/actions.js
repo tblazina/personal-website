@@ -4,7 +4,7 @@
  *
  */
 
-import { LOAD_POSTS, API_ERROR, API_SUCCESS } from './constants';
+import { FILTER_POSTS, LOAD_POSTS, API_ERROR, API_SUCCESS } from './constants';
 
 export function apiSuccess(data) {
   return {
@@ -22,5 +22,12 @@ export function apiError() {
 export function loadPosts() {
   return {
     type: LOAD_POSTS,
+  };
+}
+
+export function filterPosts(value) {
+  return {
+    type: FILTER_POSTS,
+    value,
   };
 }

@@ -7,10 +7,11 @@
 import { fromJS } from 'immutable';
 import _ from 'lodash';
 
-import { API_ERROR, API_SUCCESS } from './constants';
+import { FILTER_POSTS, API_ERROR, API_SUCCESS } from './constants';
 
 export const initialState = fromJS({
   posts: [],
+  filteredPosts: [],
 });
 
 function blogPostSummaryReducer(state = initialState, action) {
@@ -21,12 +22,24 @@ function blogPostSummaryReducer(state = initialState, action) {
         d => d.fields.publishDatetime,
         'desc',
       );
-
-      return state.set('posts', orderedPosts);
+      return state.merge({
+        posts: orderedPosts,
+        filteredPosts: orderedPosts,
+      });
     }
 
     case API_ERROR: {
       return state;
+    }
+
+    case FILTER_POSTS: {
+      if (action.value === '') {
+        return state.set('filteredPosts', state.toJS().posts);
+      }
+      const filteredPosts = _.filter(state.toJS().posts, d =>
+        d.fields.tags.includes(action.value),
+      );
+      return state.set('filteredPosts', filteredPosts);
     }
 
     default:

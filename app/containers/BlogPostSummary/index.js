@@ -11,7 +11,17 @@ import { Helmet } from 'react-helmet';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 import styled from 'styled-components';
-import { Avatar, Grid, Paper, CircularProgress } from '@material-ui/core';
+import {
+  Avatar,
+  FormControl,
+  Grid,
+  MenuItem,
+  Paper,
+  InputLabel,
+  CircularProgress,
+  Slide,
+  Select,
+} from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import _ from 'lodash';
@@ -54,18 +64,42 @@ const StyledReactMarkdown = styled(ReactMarkdown)`
   text-justify: inter-word;
 `;
 
+const StyledGrid = styled(Grid)`
+  color: gray;
+  text-align: right;
+`;
+
 /* eslint-disable react/prefer-stateless-function */
 export class BlogPostSummary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      tag: 'tags',
+    };
+    this.handleSelect = this.handleSelect.bind(this);
+  }
   componentDidMount() {
     if (_.isEmpty(this.props.posts)) {
       this.props.dispatch(actions.loadPosts());
     }
   }
 
+  handleSelect(value) {
+    this.props.dispatch(actions.filterPosts(value.target.value));
+    this.state.tag = value.target.value;
+
+    return value;
+  }
+
   render() {
-    const { posts } = this.props.blogpostsummary;
+    const { posts, filteredPosts } = this.props.blogpostsummary;
     if (_.isEmpty(posts)) {
       return <CircularProgress />;
+    }
+    let tags = [];
+    if (!_.isEmpty(posts)) {
+      posts.map(d => tags.push(d.fields.tags));
+      tags = _.uniq(_.flatten(tags));
     }
 
     return (
@@ -77,43 +111,67 @@ export class BlogPostSummary extends React.Component {
         <Grid container>
           <Grid item sm={1} />
           <Grid item sm={10}>
-            {posts.map(d => (
+            <FormControl>
+              <InputLabel style={{ fontSize: '18px' }} htmlFor="tags-simple">
+                Tags
+              </InputLabel>
+              <Select
+                style={{ width: '100px', fontSize: '18px' }}
+                value={this.state.tag}
+                onChange={this.handleSelect}
+              >
+                <MenuItem style={{ fontSize: '15px' }} value="">
+                  <em> All Posts </em>
+                </MenuItem>
+                {tags.map(d => (
+                  <MenuItem style={{ fontSize: '15px' }} value={d} key={d}>
+                    {d}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+            <br />
+            {filteredPosts.map(d => (
               <div key={d.sys.id}>
-                <StyledPaper>
-                  <Grid container>
-                    <Grid>
-                      <StyledAvatar
-                        alt="Cover photo"
-                        src={d.fields.coverPhoto.fields.file.url}
-                      />
+                <Slide in direction="right" timeout={500}>
+                  <StyledPaper>
+                    <Grid container>
+                      <Grid>
+                        <StyledAvatar
+                          alt="Cover photo"
+                          src={d.fields.coverPhoto.fields.file.url}
+                        />
+                      </Grid>
+                      <Grid>
+                        <StyledHeader2>
+                          {d.fields.publishDatetime.slice(0, 10)}
+                        </StyledHeader2>
+                      </Grid>
+                      <StyledGrid item sm={10}>
+                        {d.fields.tags.join(', ')}
+                      </StyledGrid>
                     </Grid>
-                    <Grid>
-                      <StyledHeader2>
-                        {d.fields.publishDatetime.slice(0, 10)}
-                      </StyledHeader2>
-                    </Grid>
-                  </Grid>
-                  <StyledHeader3>{d.fields.title}</StyledHeader3>
-                  {/* <StyledBody> {d.fields.content.slice(0, 50)}... </StyledBody> */}
-                  <StyledReactMarkdown
-                    source={`${d.fields.content
-                      .split(' ')
-                      .slice(0, 100)
-                      .join(' ')}...`} // Split the content to first 100 words and add ...
-                    renderers={{
-                      code: () => null, // Don't render code in summary
-                      image: () => null, // Don't render images in the summary
-                      heading: () => null, // Don't render headings in summary
-                      text: EmojiSupport,
-                    }}
-                  />
+                    <StyledHeader3>{d.fields.title}</StyledHeader3>
+                    <StyledReactMarkdown
+                      source={`${d.fields.content
+                        .split(' ')
+                        .slice(0, 100)
+                        .join(' ')}...`} // Split the content to first 100 words and add ...
+                      renderers={{
+                        code: () => null, // Don't render code in summary
+                        image: () => null, // Don't render images in the summary
+                        heading: () => null, // Don't render headings in summary
+                        text: EmojiSupport,
+                      }}
+                    />
 
-                  <StyledBody>
-                    <Link to={`/posts/${d.sys.id}`} href="/posts/id">
-                      Read more
-                    </Link>
-                  </StyledBody>
-                </StyledPaper>
+                    <StyledBody>
+                      <Link to={`/posts/${d.sys.id}`} href="/posts/id">
+                        Read more
+                      </Link>
+                    </StyledBody>
+                  </StyledPaper>
+                </Slide>
               </div>
             ))}
           </Grid>

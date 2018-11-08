@@ -31,7 +31,6 @@ const StyledReactMarkdown = styled(ReactMarkdown)`
 const StyledMarkdownImage = styled.img`
   display: block;
   margin: 0 auto;
-  image-orientation: unset;
 `;
 
 const StyleMarkdownHeading = styled.h3`
