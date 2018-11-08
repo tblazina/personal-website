@@ -11,7 +11,7 @@ import ReactMarkdown from 'react-markdown';
 
 import EmojiSupport from '../../utils/markdown_styles/EmojiSupport';
 
-const image = require('../../images/me.png');
+const image = require('../../images/me.jpg');
 const source = require('./aboutme.md');
 
 const StyledImage = styled.img`

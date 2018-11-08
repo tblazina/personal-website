@@ -9,3 +9,22 @@ I've built this page as a way to keep up to date a bit on some of the frontend a
 ## About this site
 
 I built this site in React.js using a scaffold supplied by the fantastic [react-boilerplate](https://reactboilerplate.com/) project. This project uses a number of great technologies: [Redux](https://redux.js.org/) for state management, [react-router](https://reacttraining.com/react-router/) for routing, [Redux sagas](https://redux-saga.js.org/) for async, a bunch more. This project is very actively managed and while it takes a while to grasp all the separate technologies that it employs, it's a really great way to build web apps. I've also used [Contentful](https://www.contentful.com/) for managing most of the content on the site. Contentful provides a great easy platform for hosting content and they have a really simple API which allows for easy access of all sorts of different types of data. Lastly, the site is being continuously deployed using [Netlify](https://netlify.com), which allows you to easily link a github repository and then it handles all the deployment of the site. So every time I push changes to the code of this site it gets automatically deployed. So cool! :ski:
+
+---
+---
+
+
+## Work Experience
+  - **Data scientist**, [felfel ag](https://felfel.ch), March 2016 - August 2018
+  - **Student Researcher**, ETH Zürich, November 2011-November 2015
+  - **Student Researcher/Teaching Assistent**, Dartmouth College, October 2009-September 2011
+  - **Logging Geologist**, [Tecton Geologic LLC.](http://www.westcoastgeologic.com/), 2008-2009
+  - **Line Cook**, Several different restaurants, 2000-2007
+
+## Education
+ - **Ph.D., Environmental Systems Science**, ETH Zürich, Zürich, Switzerland, 2015.
+    - Dissertation: "Selenium"
+-  **M.Sc., Earth Sciences**, Dartmouth College, Hanover, USA, New Hampshire, 2011.
+    - Dissertation: "Osmium"
+-  **B.Sc. with Honors, Geology**, Portland State Unviersity, Portland, Oregon, USA, 2008.
+    -  Honors project: "Colloids"
