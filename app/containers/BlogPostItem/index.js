@@ -34,7 +34,7 @@ const StyledMarkdownImage = styled.img`
 `;
 
 const StyleMarkdownHeading = styled.h3`
-  text-align: center;
+  text-align: left;
 `;
 
 /* eslint-disable react/prefer-stateless-function */
@@ -58,8 +58,8 @@ export class BlogPostItem extends React.Component {
           <meta name="description" content={post.fields.title} />
         </Helmet>
         <Grid container>
-          <Grid item sm={1} />
-          <Grid item sm={10}>
+          <Grid item sm={3} />
+          <Grid item sm={6}>
             <StyledReactMarkdown
               source={post.fields.content}
               escapeHtml={false}

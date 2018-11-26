@@ -15,8 +15,9 @@ const image = require('../../images/me.jpg');
 const source = require('./aboutme.md');
 
 const StyledImage = styled.img`
-  height: 30em;
-  max-width: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 `;
 const StyledMarkdown = styled(ReactMarkdown)`
   margin-top: 20px;

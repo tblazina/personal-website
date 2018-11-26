@@ -1,8 +1,8 @@
-I am a data scientist who was formally trained as a earth scientist. I have called Zürich, Switzerland home since 2011. I previously worked [felfel ag](https://felfel.ch) as a data scientist and developer, helping them improve their product sales forecasting, demand management, and generally helping them to use data to make better business decisions. Prior to working as a data scientist I studied and researched earth sciences with a focus on geochemistry and environmental data.
+I am a data scientist who was formally trained as a earth scientist. I have called Zürich, Switzerland home since 2011. I previously worked [felfel ag](https://felfel.ch) as a data scientist and developer, helping them improve their product sales forecasting, demand management, and generally helping them to use data to make better business decisions. Prior to working as a data scientist, I studied and researched earth sciences with a focus on geochemistry and environmental data.
 
-I earned a Ph.D. in Environmental Systems Science from the ETH Zürich in Zürich, Switzerland. My research focused on understanding the atmospheric deposition of the nutrient trace element [Selenium](https://en.wikipedia.org/wiki/Selenium) :waxing_crescent_moon: (not to be confused with the wonderful web testing framework [Selenium](https://www.seleniumhq.org/)). As part of this work, I analyzed large environmental, climate back-trajectory, and remote-sensing (i.e. satellite images) datasets, and necessitated that I teach myself how to program. This naturally led me to my current career in data science, where I've spent the last 3+ years continually learning how to become a better data scientist, developer and machine learning practitioner.
+I earned a Ph.D. in Environmental Systems Science from the ETH Zürich in Zürich, Switzerland. My research focused on understanding the atmospheric deposition of the nutrient trace element [Selenium](https://en.wikipedia.org/wiki/Selenium) :waxing_crescent_moon: (not to be confused with the web testing framework [Selenium](https://www.seleniumhq.org/)). As part of this work, I analyzed large environmental, climate back-trajectory, and remote-sensing (i.e. satellite images) datasets, and necessitated that I teach myself how to program. This naturally led me to my current career in data science, where I've spent the last 3+ years continually learning how to become a better data scientist, developer and machine learning practitioner.
 
-Outside of my professional life, I have a lot of hobbies that I really enjoy. I very much need to be outdoors with some frequency and particularly enjoy being in the mountains, ski touring in the winter and rock climbing in the non-snowy seasons. I very much enjoy trail running and have finished 3 ultra marathons since 2013 and plan to do more in the coming years. I am an avid cook and home baker (mostly bread). My father taught me to brew beer :beer: when I was 19 and I have been doing it since that time. I've recently taken over part of a share in a community garden plot in Zürich so the past year I have been slowly learning more about urban farming. The list of hobbies grows ever longer :grin:.
+Outside of my professional life, I have a lot of hobbies that I really enjoy. I very much need to be outdoors with some frequency and particularly enjoy being in the mountains, ski touring in the winter and rock climbing in the non-snowy seasons. I like to run and in the past few years have taken to trail running. I am an avid cook and home baker (mostly bread). My father taught me to brew beer :beer: when I was 19 and I have been doing it since that time. I've recently taken over part of a share in a community garden plot in Zürich so the past year I have been slowly learning more about gardening and permaculture. The list of hobbies grows ever longer :grin:.
 
 I've built this page as a way to keep up to date a bit on some of the frontend and [React.js](https://reactjs.com) development I've taught myself over the past few years, and as a way to track some of the things I'm currently learning about. I'll probably also be posting some random things relating to my hobbies as well. And I'll probably put some of the photos I take on here. :camera: Photography is another hobby of mine.
 
@@ -18,15 +18,16 @@ I built this site in React.js using a scaffold supplied by the fantastic [react-
 
 ## Work Experience
   - **Data scientist**, [felfel ag](https://felfel.ch), March 2016 - August 2018
-  - **Student Researcher**, ETH Zürich, November 2011-November 2015
-  - **Student Researcher/Teaching Assistent**, Dartmouth College, October 2009-September 2011
-  - **Logging Geologist**, [Tecton Geologic LLC.](http://www.westcoastgeologic.com/), 2008-2009
-  - **Line Cook**, Several different restaurants, 2000-2007
+  - **Student researcher**, ETH Zürich, November 2011-November 2015
+  - **Student researcher/teaching assistant**, Dartmouth College, October 2009-September 2011
+  - **Logging geologist**, [Tecton Geologic LLC.](http://www.westcoastgeologic.com/), 2008-2009
+  - **Engineering laboratory technician** [Professional Service Industries, LLC.](https://www.psiusa.com/), 2007-2008
+  - **Line cook**, Several different restaurants, 2000-2007
 
 ## Education
  - **Ph.D., Environmental Systems Science**, ETH Zürich, Zürich, Switzerland, 2015.
-    - Dissertation: "Selenium"
+    - Dissertation: "Investigating Rainfall as a Source of Selenium to Soils"
 -  **M.Sc., Earth Sciences**, Dartmouth College, Hanover, USA, New Hampshire, 2011.
-    - Dissertation: "Osmium"
--  **B.Sc. with Honors, Geology**, Portland State Unviersity, Portland, Oregon, USA, 2008.
-    -  Honors project: "Colloids"
+    - Dissertation: "The impact of arc terrain weathering on the global cycles of C, Sr and Os as deduced from the North Island of New Zealand"
+-  **B.Sc. with Honors, Geology**, Portland State University, Portland, Oregon, USA, 2008.
+    -  Honors project: "Colloid Geochemistry and Mineralogy in the Little North Santiam River Basin, Oregon "

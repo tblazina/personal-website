@@ -17,7 +17,6 @@ const fetchPosts = () =>
 export function* getRepos() {
   try {
     const posts = yield call(fetchPosts);
-
     yield put(apiSuccess(posts.items));
   } catch (e) {
     console.log(e);

@@ -17,11 +17,7 @@ export default class CodeBlock extends React.PureComponent {
     const { language, value } = this.props;
 
     return (
-      <SyntaxHighlighter
-        language={language}
-        style={monokaiSublime}
-        showLineNumbers
-      >
+      <SyntaxHighlighter showLineNumbers={false} language={language} style={monokaiSublime}>
         {value}
       </SyntaxHighlighter>
     );
