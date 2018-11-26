@@ -11,7 +11,6 @@ import ReactMarkdown from 'react-markdown';
 
 import EmojiSupport from '../../utils/markdown_styles/EmojiSupport';
 
-const image = require('../../images/me.jpg');
 const source = require('./aboutme.md');
 
 const StyledImage = styled.img`
@@ -35,8 +34,14 @@ function AboutMe() {
         <Grid item sm={3} />
         <Grid item sm={6}>
           <Card style={{ boxShadow: '0 1px 2px 0 rgba(0,0,0, 0)' }}>
-            <CardMedia src={image} component="a">
-              <StyledImage src={image} alt="me" />
+            <CardMedia
+              src="https://images.ctfassets.net/ful6an5guvso/2v0cfDBOWgkWy8EAm2CSYy/b98b2b0212f2bb9131d46a90823c8164/me.jpg"
+              component="a"
+            >
+              <StyledImage
+                src="https://images.ctfassets.net/ful6an5guvso/2v0cfDBOWgkWy8EAm2CSYy/b98b2b0212f2bb9131d46a90823c8164/me.jpg"
+                alt="me"
+              />
             </CardMedia>
             {/* <StyledImage src={image} alt="me" /> */}
             <StyledMarkdown
