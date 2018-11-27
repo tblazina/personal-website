@@ -23,6 +23,7 @@ import saga from './saga';
 import * as actions from './actions';
 import CodeBlock from '../../utils/markdown_styles/CodeBlock';
 import EmojiSupport from '../../utils/markdown_styles/EmojiSupport';
+import { monokaiSublime } from 'react-syntax-highlighter/styles/hljs';
 
 const StyledReactMarkdown = styled(ReactMarkdown)`
   padding: 25px;
@@ -35,6 +36,18 @@ const StyledMarkdownImage = styled.img`
 
 const StyleMarkdownHeading = styled.h3`
   text-align: left;
+`;
+
+const StyledMarkdownTable = styled.table`
+  & th {
+    text-align: center;
+  }
+  & td {
+    padding: 7px;
+    text-align: center;
+  }
+  margin-bottom: 20px;
+  margin-top: 20px;
 `;
 
 /* eslint-disable react/prefer-stateless-function */
@@ -58,8 +71,8 @@ export class BlogPostItem extends React.Component {
           <meta name="description" content={post.fields.title} />
         </Helmet>
         <Grid container>
-          <Grid item sm={3} />
-          <Grid item sm={6}>
+          <Grid item sm={2} />
+          <Grid item sm={8}>
             <StyledReactMarkdown
               source={post.fields.content}
               escapeHtml={false}
@@ -68,6 +81,7 @@ export class BlogPostItem extends React.Component {
                 image: StyledMarkdownImage,
                 heading: StyleMarkdownHeading,
                 text: EmojiSupport,
+                table: StyledMarkdownTable,
               }}
             />
           </Grid>

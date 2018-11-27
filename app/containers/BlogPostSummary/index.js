@@ -69,6 +69,11 @@ const StyledGrid = styled(Grid)`
   text-align: right;
 `;
 
+const StyledSelect = styled(Select)`
+  width: 100px;
+  font-size: 18px;
+`;
+
 /* eslint-disable react/prefer-stateless-function */
 export class BlogPostSummary extends React.Component {
   constructor(props) {
@@ -115,11 +120,7 @@ export class BlogPostSummary extends React.Component {
               <InputLabel style={{ fontSize: '18px' }} htmlFor="tags-simple">
                 Tags
               </InputLabel>
-              <Select
-                style={{ width: '100px', fontSize: '18px' }}
-                value={this.state.tag}
-                onChange={this.handleSelect}
-              >
+              <StyledSelect value={this.state.tag} onChange={this.handleSelect}>
                 <MenuItem style={{ fontSize: '15px' }} value="">
                   <em> All Posts </em>
                 </MenuItem>
@@ -128,7 +129,7 @@ export class BlogPostSummary extends React.Component {
                     {d}
                   </MenuItem>
                 ))}
-              </Select>
+              </StyledSelect>
             </FormControl>
             <br />
             {filteredPosts.map(d => (
