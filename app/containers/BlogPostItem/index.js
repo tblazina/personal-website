@@ -23,7 +23,6 @@ import saga from './saga';
 import * as actions from './actions';
 import CodeBlock from '../../utils/markdown_styles/CodeBlock';
 import EmojiSupport from '../../utils/markdown_styles/EmojiSupport';
-import { monokaiSublime } from 'react-syntax-highlighter/styles/hljs';
 
 const StyledReactMarkdown = styled(ReactMarkdown)`
   padding: 25px;
@@ -48,6 +47,8 @@ const StyledMarkdownTable = styled.table`
   }
   margin-bottom: 20px;
   margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 /* eslint-disable react/prefer-stateless-function */
