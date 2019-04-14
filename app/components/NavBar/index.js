@@ -18,6 +18,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import PhotoCamera from '@material-ui/icons/PhotoCamera';
+import Motorcycle from '@material-ui/icons/Motorcycle';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -182,6 +183,19 @@ class App extends React.Component {
                 <PhotoCamera />
               </ListItemIcon>
               <ListItemText primary="Photos" />
+            </ListItem>
+          </List>
+          <List>
+            <ListItem
+              button
+              component={Link}
+              to="/my-strava-data"
+              key="my-strava-data"
+            >
+              <ListItemIcon>
+                <Motorcycle />
+              </ListItemIcon>
+              <ListItemText primary="My Strava Data" />
             </ListItem>
           </List>
           <List>
