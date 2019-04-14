@@ -13,7 +13,7 @@ import { compose } from 'redux';
 import { Emoji } from 'emoji-mart';
 import styled from 'styled-components';
 import _ from 'lodash';
-import moment from 'moment';
+import moment from 'moment/moment.js'; /*eslint-disable-line */
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
