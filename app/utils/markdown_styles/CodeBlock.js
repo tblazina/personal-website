@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-// import { monokaiSublime } from 'react-syntax-highlighter/styles/hljs';
+import { monokaiSublime } from 'react-syntax-highlighter/dist/styles/hljs';
 
 export default class CodeBlock extends React.PureComponent {
   static propTypes = {
@@ -20,7 +20,7 @@ export default class CodeBlock extends React.PureComponent {
       <SyntaxHighlighter
         showLineNumbers={false}
         language={language}
-        // style={monokaiSublime}
+        style={monokaiSublime}
       >
         {value}
       </SyntaxHighlighter>
