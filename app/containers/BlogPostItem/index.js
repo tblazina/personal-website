@@ -74,6 +74,9 @@ export class BlogPostItem extends React.Component {
         <Grid container>
           <Grid item sm={2} />
           <Grid item sm={8}>
+            <h1 style={{ textAlign: 'center', color: '#209CEE' }}>
+              {post.fields.title}
+            </h1>
             <StyledReactMarkdown
               source={post.fields.content}
               escapeHtml={false}
