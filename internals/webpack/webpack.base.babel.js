@@ -129,6 +129,11 @@ module.exports = options => ({
       fetch: 'exports-loader?self.fetch!whatwg-fetch',
     }),
 
+    // Workaround to get moment js to work correctly
+    new webpack.ContextReplacementPlugin(
+      /moment[\\\/]locale$/,
+      /^\.\/(en|de|cz|eu)$/,
+    ),
     // Always expose NODE_ENV to webpack, in order to use `process.env.NODE_ENV`
     // inside your code for any environment checks; UglifyJS will automatically
     // drop any unreachable code.
