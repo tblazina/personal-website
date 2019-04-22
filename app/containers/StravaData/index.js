@@ -35,6 +35,10 @@ const PageDiv = styled.div`
   margin-left: 5vw;
 `;
 
+const StyledHeader = styled(TableHead)`
+  font-size: 1.5em !important;
+`;
+
 const emojiMap = {
   Run: 'runner',
   BackcountrySki: 'ski',
@@ -124,7 +128,7 @@ export class StravaData extends React.Component {
         <PageDiv>
           <Paper>
             <Table>
-              <TableHead>
+              <StyledHeader>
                 <TableRow>
                   {keys.map(key => (
                     <TableCell key={Math.random()}>
@@ -132,7 +136,7 @@ export class StravaData extends React.Component {
                     </TableCell>
                   ))}
                 </TableRow>
-              </TableHead>
+              </StyledHeader>
               <TableBody>
                 {table.map(row => (
                   <TableRow>

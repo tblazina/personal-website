@@ -36,6 +36,7 @@ import EmojiSupport from '../../utils/markdown_styles/EmojiSupport';
 
 const StyledPaper = styled(Paper)`
   margin-bottom: 30px;
+  margin-left: 10vw;
 `;
 
 const StyledHeader2 = styled.h3`
@@ -72,6 +73,7 @@ const StyledGrid = styled(Grid)`
 const StyledSelect = styled(Select)`
   width: 100px;
   font-size: 18px;
+  margin-left: 10vw;
 `;
 
 /* eslint-disable react/prefer-stateless-function */
@@ -117,7 +119,10 @@ export class BlogPostSummary extends React.Component {
           <Grid item sm={1} />
           <Grid item sm={10}>
             <FormControl>
-              <InputLabel style={{ fontSize: '18px' }} htmlFor="tags-simple">
+              <InputLabel
+                style={{ fontSize: '18px', marginLeft: '10vw' }}
+                htmlFor="tags-simple"
+              >
                 Tags
               </InputLabel>
               <StyledSelect value={this.state.tag} onChange={this.handleSelect}>

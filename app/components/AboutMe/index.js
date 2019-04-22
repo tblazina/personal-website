@@ -17,11 +17,16 @@ const StyledImage = styled.img`
   display: block;
   width: 100%;
   height: auto;
+  @media (max-width: 800px) {
+    margin-left: 10vw;
+  }
 `;
 const StyledMarkdown = styled(ReactMarkdown)`
   margin-top: 20px;
   text-align: justify;
-
+  @media (max-width: 800px) {
+    margin-left: 10vw;
+  }
   & p {
     padding-bottom: 10px;
   }
