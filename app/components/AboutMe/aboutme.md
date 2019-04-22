@@ -1,4 +1,4 @@
-I am a data scientist who was formally trained as a earth scientist. I have called Zürich, Switzerland home since 2011. I previously worked [felfel ag](https://felfel.ch) as a data scientist and developer, helping them improve their product sales forecasting, demand management, and generally helping them to use data to make better business decisions. Prior to working as a data scientist, I studied and researched earth sciences with a focus on geochemistry and environmental data.
+I am a data scientist/developer who was formally trained as a earth scientist. I have called Zürich, Switzerland home since 2011. I previously worked [felfel ag](https://felfel.ch) as a data scientist and developer, helping them improve their product sales forecasting, demand management, and generally helping them to use data to make better business decisions. Prior to working as a data scientist, I studied and researched earth sciences with a focus on geochemistry and environmental data.
 
 I earned a Ph.D. in Environmental Systems Science from the ETH Zürich in Zürich, Switzerland. My research focused on understanding the atmospheric deposition of the nutrient trace element [Selenium](https://en.wikipedia.org/wiki/Selenium) :waxing_crescent_moon: (not to be confused with the web testing framework [Selenium](https://www.seleniumhq.org/)). As part of this work, I analyzed large environmental, climate back-trajectory, and remote-sensing (i.e. satellite images) datasets, and necessitated that I teach myself how to program. This naturally led me to my current career in data science, where I've spent the last 3+ years continually learning how to become a better data scientist, developer and machine learning practitioner.
 
@@ -17,6 +17,7 @@ I built this site in React.js using a scaffold supplied by the fantastic [react-
 # Curriculum Vitae
 
 ## Work Experience
+  - **Data scientist**, [ascarix ag](https://ascarix.ch), January 2019 - Now
   - **Data scientist**, [felfel ag](https://felfel.ch), March 2016 - August 2018
   - **Student researcher**, ETH Zürich, November 2011-November 2015
   - **Student researcher/teaching assistant**, Dartmouth College, October 2009-September 2011

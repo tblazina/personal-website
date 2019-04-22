@@ -7,7 +7,7 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
 import ReactMarkdown from 'react-markdown';
-import styled from 'styled-components'
+import styled from 'styled-components';
 import EmojiSupport from '../../utils/markdown_styles/EmojiSupport';
 
 const source = require('./contactme.md');
