@@ -17,7 +17,8 @@ I built this site in React.js using a scaffold supplied by the fantastic [react-
 # Curriculum Vitae
 
 ## Work Experience
-  - **Data scientist**, [ascarix ag](https://ascarix.ch), January 2019 - Now
+  - **Data scientist** [Migros Genossenschafts Bund](https://en.wikipedia.org/wiki/Migros), June 2019 - now
+  - **Data scientist**, [Ascarix ag](https://ascarix.ch), January 2019 - June 2019
   - **Data scientist**, [felfel ag](https://felfel.ch), March 2016 - August 2018
   - **Student researcher**, ETH Zürich, November 2011-November 2015
   - **Student researcher/teaching assistant**, Dartmouth College, October 2009-September 2011
