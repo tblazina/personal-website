@@ -108,6 +108,7 @@ export class StravaData extends React.Component {
   }
 
   render() {
+    // console.log(this.props.stravadata)
     const { activities, totalActivties } = this.props.stravadata;
     const keys = [
       'type',

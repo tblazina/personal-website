@@ -24,7 +24,7 @@ import AboutMe from 'components/AboutMe';
 import Contact from 'components/Contact/Loadable';
 import BlogPostSummary from 'containers/BlogPostSummary/Loadable';
 import BlogPostItem from 'containers/BlogPostItem/Loadable';
-import StravaData from 'containers/StravaData/Loadable';
+// import StravaData from 'containers/StravaData/Loadable';
 
 const AppStyle = styled.div`
   margin-left: 0vw;
@@ -45,7 +45,7 @@ export default function App() {
             <Route exact path="/photos" component={Photos} />
             <Route exact path="/contact" component={Contact} />
             <Route exact path="/about-me" component={AboutMe} />
-            <Route exact path="/my-strava-data" component={StravaData} />
+            {/* <Route exact path="/my-strava-data" component={StravaData} /> */}
             <Route path="" component={NotFoundPage} />
           </Switch>
         </AppStyle>

@@ -15,13 +15,13 @@ axios.interceptors.response.use(
       /* eslint-disable no-param-reassign */
       error.config.isRetryRequest = true;
       return axios
-        .post('https://www.strava.com/oauth/token', {
+        .post('https://www.strava.com/api/v3/oauth/token', {
           refresh_token: localStorage.STRAVA_REFRESH_TOKEN,
           // grant_type: 'refresh_token',
           client_id: process.env.STRAVA_CLIENT_ID,
           client_secret: process.env.STRAVA_CLIENT_SECRET,
           code: process.env.STRAVA_AUTH_CODE,
-          scope: 'read_all',
+          // scope: 'activity:read_all',
         })
         .then(response => {
           localStorage.STRAVA_TOKEN = response.data.access_token;
@@ -31,6 +31,8 @@ axios.interceptors.response.use(
           }`;
           return axios(originalRequest);
         });
+    } else if (error.response.status === 400) {
+      console.log(error.config);
     }
     return Promise.reject(error);
   },
@@ -39,7 +41,7 @@ axios.interceptors.response.use(
 const fetchStats = () => {
   const config = {
     headers: {
-      Authorization: `Bearer ${localStorage.STAVA_TOKEN}`,
+      Authorization: `Bearer ${localStorage.STRAVA_TOKEN}`,
     },
   };
   return axios
@@ -57,6 +59,7 @@ const fetchActivties = payload => {
       per_page: payload.rowsPerPage,
     },
   };
+  console.log(config);
   return axios
     .get(`https://www.strava.com/api/v3/athlete/activities`, config)
     .then(response => response);
