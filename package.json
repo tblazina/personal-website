@@ -174,7 +174,7 @@
     "invariant": "2.2.4",
     "ip": "1.1.5",
     "lodash": "4.17.21",
-    "minimist": "1.2.3",
+    "minimist": "1.2.6",
     "moment": "^2.24.0",
     "npm": "^6.4.1",
     "prop-types": "15.6.1",
