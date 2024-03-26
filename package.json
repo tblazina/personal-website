@@ -163,7 +163,7 @@
     "emoji-mart": "^2.8.1",
     "emojilib": "^2.3.0",
     "env-cmd": "^8.0.2",
-    "express": "4.16.3",
+    "express": "4.19.2",
     "fontfaceobserver": "2.0.13",
     "history": "4.7.2",
     "hoist-non-react-statics": "2.5.5",
